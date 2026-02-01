@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Captain Benzy</title>
-</head>
-<body>
-  <h1>Hello World!</h1>
-  <p>This is my first website.</p>
-</body>
-</html>
+<script>
+  // Get the current domain
+  const domain = window.location.hostname;
+
+  if (domain === "test.captainbenzy.org") {
+    // Show a special message or redirect
+    document.body.innerHTML = `
+      <h1>Welcome to the Test Site</h1>
+      <p>This is a backup or alternate version of the site.</p>
+      <p><a href="https://captainbenzy.org">Go back to the main site</a></p>
+    `;
+  }
+</script>
