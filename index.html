@@ -1,13 +1,26 @@
-<script>
-  // Get the current domain
-  const domain = window.location.hostname;
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main Site - CaptainBenzy</title>
+</head>
+<body>
+  <h1>Welcome to CaptainBenzy.org</h1>
+  <p>This is the main homepage.</p>
 
-  if (domain === "test.captainbenzy.org") {
-    // Show a special message or redirect
-    document.body.innerHTML = `
-      <h1>Welcome to the Test Site</h1>
-      <p>This is a backup or alternate version of the site.</p>
-      <p><a href="https://captainbenzy.org">Go back to the main site</a></p>
-    `;
-  }
-</script>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="ranka.html">Ranka Page</a>
+  </nav>
+
+  <script>
+    // Detect if visitor came via ranka.captainbenzy.org
+    if (window.location.hostname === "ranka.captainbenzy.org") {
+      // Redirect them to the special page
+      window.location.href = "ranka.html";
+    }
+  </script>
+</body>
+</html>
